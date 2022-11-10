@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e8dd7f73-5153-4cce-94c1-9d736ac967ce" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.SortedDictionary`2" Category="Dictionary" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://ws.netcash.co.za/NIWS/niws_nif.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NIWS_NIF.xsd" MetadataType="Schema" ID="036dd70a-137a-490d-a775-e143a3a41359" SourceId="1" SourceUrl="https://ws.netcash.co.za/NIWS/NIWS_NIF.svc?xsd=xsd0" />
+    <MetadataFile FileName="NIWS_NIF1.xsd" MetadataType="Schema" ID="982c6774-a547-47cf-b8ac-83789dc8b065" SourceId="1" SourceUrl="https://ws.netcash.co.za/NIWS/NIWS_NIF.svc?xsd=xsd1" />
+    <MetadataFile FileName="NIWS_NIF.wsdl" MetadataType="Wsdl" ID="59b0fafd-800a-463f-9222-e7585f2d7320" SourceId="1" SourceUrl="https://ws.netcash.co.za/NIWS/NIWS_NIF.svc?wsdl" />
+    <MetadataFile FileName="NIWS_NIF2.xsd" MetadataType="Schema" ID="788d6668-bf0b-4aaf-8a8f-5ae92a624ce8" SourceId="1" SourceUrl="https://ws.netcash.co.za/NIWS/NIWS_NIF.svc?xsd=xsd3" />
+    <MetadataFile FileName="NIWS_NIF3.xsd" MetadataType="Schema" ID="2723e672-75d8-4337-9e4d-1b9832ee4dd8" SourceId="1" SourceUrl="https://ws.netcash.co.za/NIWS/NIWS_NIF.svc?xsd=xsd2" />
+    <MetadataFile FileName="NIWS_NIF.disco" MetadataType="Disco" ID="05768e36-31c2-4b69-8b93-0ec010eaee16" SourceId="1" SourceUrl="https://ws.netcash.co.za/NIWS/NIWS_NIF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

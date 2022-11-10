@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://ws.netcash.co.za/NIWS/NIWS_NIF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NC.DG.TMS.C.WCF.NIWS" />
+  <xs:import schemaLocation="https://ws.netcash.co.za/NIWS/NIWS_NIF.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://ws.netcash.co.za/NIWS/NIWS_NIF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="GetPaymentLimits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentLimitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NC.DG.TMS.C.WCF.NIWS" minOccurs="0" name="GetPaymentLimitsResult" nillable="true" type="q1:LimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDebitLimits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDebitLimitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NC.DG.TMS.C.WCF.NIWS" minOccurs="0" name="GetDebitLimitsResult" nillable="true" type="q2:LimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountFundsRelease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AmountInCents" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountFundsReleaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AccountFundsReleaseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestActionDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Instruction" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ForwardActionDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestActionDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestActionDateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestInterimMerchantStatement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestInterimMerchantStatementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestInterimMerchantStatementResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestMerchantStatement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromActionDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestMerchantStatementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestMerchantStatementResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveMerchantStatement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PollingId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveMerchantStatementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveMerchantStatementResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestTransactionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestTransactionTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestTransactionTypesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTransactionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PollingId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveTransactionTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveTransactionTypesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LegacyCompactBatchFileUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PIN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="File" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProcessAsLegacy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LegacyCompactBatchFileUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LegacyCompactBatchFileUploadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LegacyBatchFileUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PIN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="File" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProcessAsLegacy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LegacyBatchFileUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LegacyBatchFileUploadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchFileUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="File" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchFileUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchFileUploadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestFileUploadReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FileToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestFileUploadReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestFileUploadReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestCombinedUploadReportForDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestCombinedUploadReportForDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestCombinedUploadReportForDateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestCreditDataReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FileToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestCreditDataReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RequestCreditDataReportResult" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestAVSReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FileToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestAVSReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestAVSReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestPayNowInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serviceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestPayNowInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestPayNowInvoiceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsValidServiceKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MethodKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InstructionCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SofwareVendorCode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsValidServiceKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="IsValidServiceKeyResult" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountServiceKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MethodKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AccountNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SoftwareVendorCode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AccountServiceKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AccountServiceKeysResult" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MerchantStatementSourceStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MerchantStatementSourceStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/NC.DG.TMS.C.WCF.NIWS" minOccurs="0" name="MerchantStatementSourceStatusResult" nillable="true" type="q6:MerchantStatementSourceStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestDebitBatchUnauthorised">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestDebitBatchUnauthorisedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestDebitBatchUnauthorisedResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveBatchStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveBatchStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveBatchStatusResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveUnauthorisedBatches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveUnauthorisedBatchesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveUnauthorisedBatchesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestBatchAuthorise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="BatchIndicator" type="q7:guid" />
+        <xs:element minOccurs="0" name="SendEmail" type="xs:boolean" />
+        <xs:element minOccurs="0" name="FromName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FromAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SendSMS" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ReleaseFunds" type="xs:boolean" />
+        <xs:element minOccurs="0" name="BankTransfer" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestBatchAuthoriseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestBatchAuthoriseResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestMandateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestMandateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RequestMandateDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveMandateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FileToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveMandateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveMandateDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveMandatePDF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FileToken" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveMandatePDFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveMandatePDFResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMandate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AccountReference" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MandateName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MandateAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="IsConsumer" type="xs:boolean" />
+        <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TradingName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RegisteredName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/NC.DG.TMS.C.WCF.NIWS" minOccurs="0" name="DebitFrequency" type="q8:MandateOptions.MandateDebitFrequency" />
+        <xs:element minOccurs="0" name="CommencementMonth" type="xs:int" />
+        <xs:element minOccurs="0" name="CommencementDay" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AgreementDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AgreementReferenceNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CancellationNoticePeriod" nillable="true" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/NC.DG.TMS.C.WCF.NIWS" minOccurs="0" name="PublicHolidayOption" nillable="true" type="q9:MandateOptions.MandatePublicHolidayOption" />
+        <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Field1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Field2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Field3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Field4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Field5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Field6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Field7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Field8" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Field9" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AllowVariableDebitAmounts" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="BankDetailType" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="BankAccountName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BankAccountNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/NC.DG.TMS.C.WCF.NIWS" minOccurs="0" name="BankAccountType" nillable="true" type="q10:MandateOptions.BankAccountType" />
+        <xs:element minOccurs="0" name="CreditCardToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreditCardType" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="ExpiryMonth" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="ExpiryYear" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="IsIdNumber" nillable="true" type="xs:boolean" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/NC.DG.TMS.C.WCF.NIWS" minOccurs="0" name="Title" nillable="true" type="q11:MandateOptions.Title" />
+        <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DecemberDebitDay" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DebitMasterfileGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhysicalAddressLine1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhysicalAddressLine2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhysicalAddressLine3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhysicalSuburb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhysicalCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhysicalProvince" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhysicalPostalCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MandateActive" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="RequestAVS" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="AVSCheckNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMandateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/NC.DG.TMS.C.WCF.NIWS" minOccurs="0" name="AddMandateResult" nillable="true" type="q12:AddMandateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
